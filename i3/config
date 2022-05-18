@@ -5,7 +5,7 @@
 set $mod Mod4
 
 # semicolon (us) / ograve (it)
-set $ko semicolon
+set $ko ograve
 
 # Borders
 for_window [class="^.*"] border pixel 3
@@ -13,7 +13,7 @@ for_window [class="^.*"] border pixel 3
 # Background apps 
 exec_always --no-startup-id nitrogen --restore
 
-#exec --no-startup-id setxkbmap it
+exec --no-startup-id setxkbmap it
 exec --no-startup-id numlockx
 exec --no-startup-id xbacklight -set 10
 exec --no-startup-id nm-applet
@@ -38,11 +38,15 @@ for_window [class="whatsapp"] move container to workspace $ws3 # da risolvere
 
 #4 - studio
 
-#5 - games
-for_window [class="PolyMC"] move container to workspace $ws5
+#5 - atom
+for_window [class='Atom'] move container to workspace $ws5
 
-#6-empty
-#7-empty
+#5 - games
+for_window [class="PolyMC"] move container to workspace $ws6
+
+#6 - prod
+for_window [class="Ardour"] move container to workspace $ws7
+for_window [class="GIMP"] move container to workspace $ws7
 
 #8 - teams
 for_window [class="Microsoft Teams - Preview"] move container to workspace $ws8
@@ -159,9 +163,9 @@ set $ws1 "web"
 set $ws2 "term"; layout tabbed
 set $ws3 "social"
 set $ws4 "studio"
-set $ws5 "games"
-set $ws6 "empty-6"
-set $ws7 "empty-7"
+set $ws5 "atom"
+set $ws6 "games"
+set $ws7 "prod"
 set $ws8 "teams"
 set $ws9 "discord"
 set $ws10 "mail"
