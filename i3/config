@@ -5,15 +5,15 @@
 set $mod Mod4
 
 # semicolon (us) / ograve (it)
-set $ko ograve
+set $ko semicolon
 
 # Borders
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 # Background apps 
 exec_always --no-startup-id nitrogen --restore
 
-exec --no-startup-id setxkbmap it
+#exec --no-startup-id setxkbmap it
 exec --no-startup-id numlockx
 exec --no-startup-id xbacklight -set 10
 exec --no-startup-id nm-applet
@@ -34,12 +34,12 @@ for_window [class="Alacritty"] move container to workspace $ws2
 
 #3 - social
 for_window [class="Telegram"] move container to workspace $ws3
-for_window [class="whatsapp"] move container to workspace $ws3 # da risolvere
+for_window [class="whatsdesk"] move container to workspace $ws3
 
 #4 - studio
 
 #5 - atom
-for_window [class='Atom'] move container to workspace $ws5
+for_window [class='atom'] move container to workspace $ws5
 
 #5 - games
 for_window [class="PolyMC"] move container to workspace $ws6
