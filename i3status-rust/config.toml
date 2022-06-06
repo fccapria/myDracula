@@ -9,7 +9,8 @@ interval = 3600
 [[block]]
 block = "weather"
 format = "{weather} ({location}) {temp}"
-service = { name = "openweathermap", api_key = "", city_id = "", units = "metric"}
+service = { name = "openweathermap", api_key = "", lang = "", city_id = "", units = "metric"}
+#autolocate = true
 
 [[block]]
 block = "sound"
@@ -22,12 +23,20 @@ device = "intel_backlight"
 on_click = "none"
 
 [[block]]
+block = "music"
+player = "spotify"
+buttons = ["play", "next"]
+on_collapsed_click = "spotify"
+
+[[block]]
 block = "networkmanager"
+#on_click = "alacritty -e nmtui"
 interface_name_exclude = ["br\\-[0-9a-f]{12}", "docker\\d+"]
 interface_name_include = []
 
 [[block]]
 block = "battery"
+#if_command = "test -e /sys/class/power_supply/BAT0"
 interval = 10
 format = "{percentage} {time}"
 
@@ -35,3 +44,4 @@ format = "{percentage} {time}"
 block = "time"
 interval = 5
 format = "%a %d/%m %R"
+locale = "it_IT"
