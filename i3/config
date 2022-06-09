@@ -21,8 +21,9 @@ exec --no-startup-id /usr/bin/dunst
 exec --no-startup-id ~/scripts/monitor.sh
 
 # Startup apps
+
 exec --no-startup-id thunderbird #ws 10 aka mail
-exec --no-startup-id alacritty #ws 2 aka term
+exec --no-startup-id alacritty #ws 2 aka dev
 
 # --------------------------------------------------- Rules
 
